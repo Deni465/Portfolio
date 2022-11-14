@@ -8,7 +8,7 @@ export default function Search() {
 
     useEffect(() => {
         // console.log("recipeQuery", recipeQuery);
-        fetch(`/getlatestusers/?query=${recipeQuery}`, {
+        fetch(`/showrecipes/?query=${recipeQuery}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         })

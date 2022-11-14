@@ -9,7 +9,6 @@ export default function ResultList({ recipes }: ResultListProps) {
     return (
         <ul>
             <li>
-                {" "}
                 <div className={style.container}>
                     <div className={style.card}>
                         <figure className={style.card__thumb}>
