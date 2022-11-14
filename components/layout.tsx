@@ -50,7 +50,7 @@ export default function Layout({
                             </Link>
                         </li>
                         <li className={styles.navbarli}>
-                            <Link className="link" href="">
+                            <Link className="link" href=" ">
                                 Register/Login
                             </Link>
                         </li>

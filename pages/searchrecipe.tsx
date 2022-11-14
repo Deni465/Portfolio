@@ -1,12 +1,24 @@
 import Layout from "../components/layout";
-import style from "../styles/search.module.css";
-import placeholderImg from "../public/images/food.jpg";
-import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ResultList from "../components/resultList";
 
-export default function About() {
-    console.log("About Page");
-    const [userQuery, setUserQuery] = useState("");
+export default function Search() {
+    const [recipeQuery, setRecipeQuery] = useState("");
+    const [foundRecipeList, setFoundRecipeList] = useState([]);
+
+    useEffect(() => {
+        // console.log("recipeQuery", recipeQuery);
+        fetch(`/getlatestusers/?query=${recipeQuery}`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                // console.log("Hello find user");
+                setFoundRecipeList(data);
+            });
+    }, [recipeQuery]);
+
     return (
         <>
             <Layout home>
@@ -18,30 +30,11 @@ export default function About() {
                     type="text"
                     placeholder="search here"
                     onChange={(e) => {
-                        setUserQuery(e.target.value);
+                        setRecipeQuery(e.target.value);
                     }}
                 ></input>
             </div>
-            <div className={style.container}>
-                <div className={style.card}>
-                    <figure className={style.card__thumb}>
-                        <div>
-                            <Image
-                                src={placeholderImg}
-                                alt="food"
-                                className={style.card__image}
-                            />
-                        </div>
-                        <figcaption className={style.card__caption}>
-                            <h2 className={style.card__title}>Hello</h2>
-                            <p className={style.card__snippet}>
-                                Is it me you're looking for
-                            </p>
-                            <a className={style.card__button}>More</a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            <ResultList recipes={foundRecipeList} />
         </>
     );
 }
