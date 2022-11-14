@@ -1,63 +1,51 @@
 import Image from "next/image";
 import style from "../styles/search.module.css";
 import placeholderImg from "../public/images/food.jpg";
+import Link from "next/link";
 interface ResultListProps {
-    recipes: any[];
+    recipes: { id: number }[];
 }
 
 export default function ResultList({ recipes }: ResultListProps) {
+    console.log(
+        "🚀 ~ file: resultList.tsx ~ line 10 ~ ResultList ~ recipes",
+        recipes
+    );
+    const showProfile = (id: any) => {
+        console.log("id", id);
+    };
+
     return (
         <ul>
-            <li>
-                <div className={style.container}>
-                    <div className={style.card}>
-                        <figure className={style.card__thumb}>
-                            <div>
-                                <Image
-                                    src={placeholderImg}
-                                    alt="food"
-                                    className={style.card__image}
-                                />
-                            </div>
-                            <figcaption className={style.card__caption}>
-                                <h2 className={style.card__title}>Hello</h2>
-                                <p className={style.card__snippet}>
-                                    Is it me you're looking for
-                                </p>
-                                <a className={style.card__button}>More</a>
-                            </figcaption>
-                        </figure>
+            {recipes.map((recipe) => (
+                <li key={recipe.id} onClick={() => showProfile(recipe.id)}>
+                    <div className={style.container}>
+                        <div className={style.card}>
+                            <figure className={style.card__thumb}>
+                                <div>
+                                    <Image
+                                        src={placeholderImg}
+                                        alt="food"
+                                        className={style.card__image}
+                                    />
+                                </div>
+                                <figcaption className={style.card__caption}>
+                                    <h2 className={style.card__title}>Hello</h2>
+                                    <p className={style.card__snippet}>
+                                        Is it me youre looking for
+                                    </p>
+                                    <Link
+                                        href={`/show-recipes/${recipe.id}`}
+                                        className={style.card__button}
+                                    >
+                                        More
+                                    </Link>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+            ))}
         </ul>
     );
 }
-
-//     const showProfile = (id) => {
-//         // console.log("id", id);
-//         // history.push(`/showlatestuser/${id}`);
-//     };
-
-//     return (
-//         <ul className="findUser">
-//             {users.map((user) => (
-//                 <li
-//                     className="userlist"
-//                     key={user.id}
-//                     onClick={() => showProfile(user.id)}
-//                 >
-//                     <Link
-//                         className="links userInfo"
-//                         to={`/showlatestuser/${user.id}`}
-//                     >
-//                         <img src={user.img_url} style={{ width: 100 }} />{" "}
-//                         <p className="links">
-//                             {user.first} {user.last}
-//                         </p>
-//                     </Link>
-//                 </li>
-//             ))}
-//         </ul>
-//     );
-// }

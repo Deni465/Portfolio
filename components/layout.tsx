@@ -3,17 +3,12 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 const name = "Recipe Search App";
 export const siteTitle = "Recipe Search App";
 
-export default function Layout({
-    children,
-    home,
-}: {
-    children: any;
-    home: any;
-}) {
+export default function Layout({ children }: { children: ReactNode }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -57,6 +52,7 @@ export default function Layout({
                     </ul>
                 </>
             </header>
+            <main>{children}</main>
         </div>
     );
 }

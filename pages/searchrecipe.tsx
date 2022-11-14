@@ -6,24 +6,21 @@ export default function Search() {
     const [recipeQuery, setRecipeQuery] = useState("");
     const [foundRecipeList, setFoundRecipeList] = useState([]);
 
-    useEffect(() => {
-        // console.log("recipeQuery", recipeQuery);
-        fetch(`/showrecipes/?query=${recipeQuery}`, {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                // console.log("Hello find user");
-                setFoundRecipeList(data);
-            });
-    }, [recipeQuery]);
+    // useEffect(() => {
+    //     // console.log("recipeQuery", recipeQuery);
+    //     fetch(`/showrecipe/?query=${recipeQuery}`, {
+    //         method: "GET",
+    //         headers: { "Content-Type": "application/json" },
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             // console.log("Hello find user");
+    //             setFoundRecipeList(data);
+    //         });
+    // }, [recipeQuery]);
 
     return (
         <>
-            <Layout home>
-                <h1>This is my Search Recipe Page</h1>
-            </Layout>
             <div className="flex  m-5 place-content-center">
                 <input
                     className="border-solid border-gray border-2 p-1 "
@@ -34,7 +31,7 @@ export default function Search() {
                     }}
                 ></input>
             </div>
-            <ResultList recipes={foundRecipeList} />
+            <ResultList recipes={[{ id: 1 }]} />
         </>
     );
 }

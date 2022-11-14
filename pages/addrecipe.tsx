@@ -1,26 +1,28 @@
-import Layout from "../components/layout";
+import { useEffect, useState } from "react";
 import style from "../styles/add.module.css";
 
 export default function Contact() {
-    console.log("Contact Page");
+    console.log("Add Recipe Page");
+
+    const [state, setState] = useState({
+        recipe: {
+            id: "",
+            name: "",
+            ingredients: "",
+            description: "",
+            img_url: "",
+        },
+    });
+
+    useEffect(() => {});
 
     return (
         <>
-            <Layout home>
-                <h1 className="flex place-content-center">
-                    This is my add recipe Page
-                </h1>
-            </Layout>
             <div className={style.container}>
                 <form action="" className={style.form}>
                     <input
                         type="text"
                         placeholder="recipe name"
-                        className={style.input}
-                    />
-                    <input
-                        type="text"
-                        placeholder="ingredient qunatity"
                         className={style.input}
                     />
                     <input

@@ -8,10 +8,6 @@ import Image from "next/image";
 export default function Home() {
     return (
         <>
-            <Layout home>
-                <p>Hello</p>
-            </Layout>
-
             <div className="flex flex-col place-items-center">
                 <h1 className={utilStyles.heading2Xl}>The Finest</h1>
                 <p>A Website to find the finest recipes for every occassion</p>
