@@ -35,24 +35,24 @@ export default function Layout({
                 <>
                     <ul className={styles.navbar}>
                         <li className={styles.navbarli}>
-                            <a className="link" href="">
+                            <Link className="link" href="/">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className={styles.navbarli}>
-                            <a className="link" href="">
-                                News
-                            </a>
+                            <Link className="link" href="/searchrecipe">
+                                Search Recipe
+                            </Link>
                         </li>
                         <li className={styles.navbarli}>
-                            <a className="link" href="">
-                                Contact
-                            </a>
+                            <Link className="link" href="/addrecipe">
+                                Add Recipe
+                            </Link>
                         </li>
                         <li className={styles.navbarli}>
-                            <a className="link" href="">
-                                About
-                            </a>
+                            <Link className="link" href="">
+                                Register/Login
+                            </Link>
                         </li>
                     </ul>
                 </>

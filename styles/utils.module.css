@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
+
 .heading2Xl {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 500;
     letter-spacing: -0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    font-family: "Xanh Mono", monospace;
+
     /* margin: 1rem 0; */
 }
 

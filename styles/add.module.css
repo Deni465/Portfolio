@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid lightgray 2px;
+    margin: 5px;
+}
+
+.input {
+    margin: 5px;
+    border: solid lightgray 2px;
+    padding: 5px;
+}
+
+.button {
+    margin: 5px;
+    padding: 5px;
+}
+
+.button:hover {
+    margin: 5px;
+    /* -webkit-box-shadow: 5px 5px 15px 5px #bfbfbf; */
+    box-shadow: 5px 5px 15px 5px #bfbfbf;
+    padding: 5px;
+}
