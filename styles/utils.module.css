@@ -4,10 +4,6 @@
     font-weight: 800;
     letter-spacing: -0.05rem;
     /* margin: 1rem 0; */
-    margin-top: -3rem;
-    background: -webkit-linear-gradient(rgb(226, 229, 238), rgb(14, 35, 140));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .headingXl {

@@ -32,60 +32,31 @@ export default function Layout({
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className={styles.header}>
-                {home ? (
-                    <>
-                        <div className="flex items-center">
-                            {" "}
-                            <Link href="/" className="m-5">
+                <>
+                    <ul className={styles.navbar}>
+                        <li className={styles.navbarli}>
+                            <a className="link" href="">
                                 Home
-                            </Link>
-                            <Link href="/about" className="m-5">
-                                About
-                            </Link>
-                            <Image
-                                priority
-                                src="/images/profile.jpg"
-                                className={utilStyles.borderCircle}
-                                height={144}
-                                width={144}
-                                alt=""
-                            />
-                            <Link href="/contact" className="m-5">
+                            </a>
+                        </li>
+                        <li className={styles.navbarli}>
+                            <a className="link" href="">
+                                News
+                            </a>
+                        </li>
+                        <li className={styles.navbarli}>
+                            <a className="link" href="">
                                 Contact
-                            </Link>
-                        </div>
-
-                        <div>
-                            {" "}
-                            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                        </div>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <Image
-                                priority
-                                src="/images/profile.jpg"
-                                className={utilStyles.borderCircle}
-                                height={108}
-                                width={108}
-                                alt=""
-                            />
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/" className={utilStyles.colorInherit}>
-                                {name}
-                            </Link>
-                        </h2>
-                    </>
-                )}
+                            </a>
+                        </li>
+                        <li className={styles.navbarli}>
+                            <a className="link" href="">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </>
             </header>
-            <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">← Back to home</Link>
-                </div>
-            )}
         </div>
     );
 }
