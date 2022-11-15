@@ -6,18 +6,18 @@ export default function Search() {
     const [recipeQuery, setRecipeQuery] = useState("");
     const [foundRecipeList, setFoundRecipeList] = useState([]);
 
-    // useEffect(() => {
-    //     // console.log("recipeQuery", recipeQuery);
-    //     fetch(`/showrecipe/?query=${recipeQuery}`, {
-    //         method: "GET",
-    //         headers: { "Content-Type": "application/json" },
-    //     })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             // console.log("Hello find user");
-    //             setFoundRecipeList(data);
-    //         });
-    // }, [recipeQuery]);
+    useEffect(() => {
+        // console.log("recipeQuery", recipeQuery);
+        fetch(`/showrecipe/?query=${recipeQuery}`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                // console.log("Hello find user");
+                setFoundRecipeList(data);
+            });
+    }, [recipeQuery]);
 
     return (
         <>

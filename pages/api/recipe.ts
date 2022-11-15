@@ -3,20 +3,23 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createRecipe, getAllRecipes } from "../../lib/db/recipes";
 
 type Data = {
-    name: string;
+    message: string;
 };
 
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse<Data>
+    res: NextApiResponse<Data> 
 ) {
     if (req.method === "POST") {
+        console.log("req.body", req.body);
+
+        const { name, ingredients, description, img_url } = req.body;
         // Process a POST request
-        await createRecipe();
-        res.status(201).json({ name: "John Doe" });
+        await createRecipe(name, ingredients, description, img_url);
+        res.status(201).json({ message: "Successful inserting" });
     } else {
         // Handle any other HTTP method
         await getAllRecipes();
-        res.status(200).json({ name: "John Doe" });
+        res.status(200).json({ message: "Successful calling all recipes" });
     }
 }
