@@ -1,10 +1,15 @@
 import Image from "next/image";
 import style from "../styles/search.module.css";
-import placeholderImg from "../public/images/food.jpg";
 import stylus from "./resultList.module.css";
 import Link from "next/link";
 interface ResultListProps {
-    recipes: { id: number }[];
+    recipes: {
+        id: number;
+        name: string;
+        ingredients: string;
+        description: string;
+        img_url: string;
+    }[];
 }
 
 export default function ResultList({ recipes }: ResultListProps) {
@@ -12,6 +17,7 @@ export default function ResultList({ recipes }: ResultListProps) {
         "🚀 ~ file: resultList.tsx ~ line 10 ~ ResultList ~ recipes",
         recipes
     );
+
     const showProfile = (id: number) => {
         console.log("id", id);
     };

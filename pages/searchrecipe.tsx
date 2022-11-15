@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ResultList from "../components/resultList";
+import { getMatchingRecipes } from "../lib/db/recipes";
 
 export default function Search() {
     const [recipeQuery, setRecipeQuery] = useState("");
@@ -12,6 +13,17 @@ export default function Search() {
             .then((data) => {
                 console.log("Hello find user", data);
                 setFoundRecipeList(data);
+            });
+    }, [recipeQuery]);
+
+    useEffect(() => {
+        // console.log("recipeQuery", recipeQuery);
+        fetch(`/api/search-display`)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Hello find user", data);
+                setRecipeQuery(data);
+                // getMatchingRecipes(recipeQuery);
             });
     }, [recipeQuery]);
 
