@@ -1,5 +1,7 @@
 import connection from "../db";
 
+///////////////////// ADD /////////////////////
+
 export async function getAllRecipes() {
     try {
         const results = await connection?.query("SELECT * FROM recipes;");
@@ -27,6 +29,8 @@ export async function createRecipe(
         console.log("error in creating recipe", error);
     }
 }
+
+///////////////////// SEARCH /////////////////////
 
 export async function showLatestRecipe() {
     try {

@@ -1,0 +1,9 @@
+.findRecipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: #e6e6e6;
+    font-family: sans-serif;
+}

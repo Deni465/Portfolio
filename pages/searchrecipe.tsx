@@ -1,4 +1,3 @@
-import Layout from "../components/layout";
 import { useState, useEffect } from "react";
 import ResultList from "../components/resultList";
 
@@ -7,14 +6,11 @@ export default function Search() {
     const [foundRecipeList, setFoundRecipeList] = useState([]);
 
     useEffect(() => {
-        // console.log("recipeQuery", recipeQuery);
-        fetch(`/showrecipe/?query=${recipeQuery}`, {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        })
+        console.log("recipeQuery", recipeQuery);
+        fetch(`/api/display`)
             .then((response) => response.json())
             .then((data) => {
-                // console.log("Hello find user");
+                console.log("Hello find user", data);
                 setFoundRecipeList(data);
             });
     }, [recipeQuery]);
@@ -31,7 +27,7 @@ export default function Search() {
                     }}
                 ></input>
             </div>
-            <ResultList recipes={[{ id: 1 }]} />
+            <ResultList recipes={foundRecipeList} />
         </>
     );
 }

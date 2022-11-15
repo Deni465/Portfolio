@@ -49,7 +49,6 @@ export default function Contact() {
             .then((response) => response.json())
             .then((data) => {
                 console.log("add recipe data", data);
-                // setFoundRecipeList(data);
             });
     };
 

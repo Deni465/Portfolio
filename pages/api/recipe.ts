@@ -11,7 +11,7 @@ export default async function handler(
     res: NextApiResponse<Data> 
 ) {
     if (req.method === "POST") {
-        console.log("req.body", req.body);
+        // console.log("req.body", req.body);
 
         const { name, ingredients, description, img_url } = req.body;
         // Process a POST request
