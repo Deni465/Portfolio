@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
+
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000e1b;
+    /* position: fixed; */
+    z-index: 100;
+    width: 100%;
 }
 
 .navbarli {
@@ -20,9 +25,11 @@
 
 .navbarli:last-child {
     float: right;
+    font-family: "Xanh Mono", monospace;
+    background-color: #005170;
 }
 
 /* Change the link color to #111 (black) on hover */
 .navbarli a:hover {
-    background-color: #111;
+    background-color: #005170;
 }

@@ -13,13 +13,13 @@ interface ResultListProps {
 }
 
 export default function ResultList({ recipes }: ResultListProps) {
-    console.log(
-        "🚀 ~ file: resultList.tsx ~ line 10 ~ ResultList ~ recipes",
-        recipes
-    );
+    // console.log(
+    //     "🚀 ~ file: resultList.tsx ~ line 10 ~ ResultList ~ recipes",
+    //     recipes
+    // );
 
     const showProfile = (id: number) => {
-        console.log("id", id);
+        // console.log("id", id);
     };
 
     return (

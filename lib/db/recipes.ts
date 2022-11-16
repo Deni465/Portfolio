@@ -14,8 +14,8 @@ export async function getAllRecipes() {
 
 export async function createRecipe(
     name: string,
-    ingredients: any,
-    description: any,
+    ingredients: string,
+    description: string,
     img_url: string
 ) {
     try {
@@ -52,5 +52,19 @@ export async function getMatchingRecipes(name: string) {
         return results?.rows;
     } catch (error) {
         console.log("error in getting matching recipes", error);
+    }
+}
+
+///////////////////// SEARCH /////////////////////
+
+export async function getRecipeById(id: string) {
+    try {
+        const results = await connection?.query(
+            "SELECT * FROM recipes WHERE id = $1",
+            [id]
+        );
+        return results?.rows[0];
+    } catch (error) {
+        console.log("error in getting recipe by id", error);
     }
 }

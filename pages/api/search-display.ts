@@ -2,10 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getMatchingRecipes } from "../../lib/db/recipes";
 
-type Data = {
-    name: string;
-};
-
+type Data = any[];
 
 export default async function handler(
     req: NextApiRequest,
@@ -13,8 +10,9 @@ export default async function handler(
 ) {
     if (req.method === "GET") {
         // console.log("rows", rows);
-
-        const rows = await getMatchingRecipes(name);
-        res.status(200).json(rows);
+        console.log(req.query);
+        const { recipeName } = req.query;
+        const rows = await getMatchingRecipes((recipeName as string) || "");
+        res.status(200).json(rows || []);
     }
 }

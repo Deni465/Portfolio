@@ -6,6 +6,6 @@ CREATE TABLE recipes(
     name VARCHAR,
     ingredients TEXT, 
     description TEXT,
-    img_url VARCHAR,
+    img_url TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

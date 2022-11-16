@@ -8,14 +8,14 @@ type Data = {
 
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse<Data> 
+    res: NextApiResponse<Data>
 ) {
     if (req.method === "POST") {
         // console.log("req.body", req.body);
 
-        const { name, ingredients, description, img_url } = req.body;
+        const { name, ingredients, description, image } = req.body;
         // Process a POST request
-        await createRecipe(name, ingredients, description, img_url);
+        await createRecipe(name, ingredients, description, image);
         res.status(201).json({ message: "Successful inserting" });
     } else {
         // Handle any other HTTP method

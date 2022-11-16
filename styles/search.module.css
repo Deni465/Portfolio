@@ -3,17 +3,17 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin: 20px 0 80px;
+    margin: 20px 0 5px;
 }
 .card {
-    width: 200px;
+    width: 250px;
     margin: 10px;
     background-color: white;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .card:hover .card__caption {
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-34%);
 }
 .card:hover .card__image {
     transform: translateY(-10px);
@@ -68,7 +68,7 @@
     max-height: 85px;
     overflow: hidden;
     font-family: "Playfair Display", serif;
-    font-size: 23px;
+    font-size: 25px;
     line-height: 28px;
     text-shadow: 0px 1px 5px black;
     text-overflow: ellipsis;

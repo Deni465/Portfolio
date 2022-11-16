@@ -45,8 +45,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                             </Link>
                         </li>
                         <li className={styles.navbarli}>
-                            <Link className="link" href=" ">
-                                Register/Login
+                            <Link className="link" href="/">
+                                The Finest
                             </Link>
                         </li>
                     </ul>
