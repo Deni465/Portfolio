@@ -35,7 +35,7 @@ export async function createRecipe(
 export async function showLatestRecipe() {
     try {
         const results = await connection?.query(
-            "SELECT * FROM recipes ORDER BY id DESC LIMIT 6;"
+            "SELECT * FROM recipes ORDER BY id DESC;"
         );
         return results?.rows;
     } catch (error) {

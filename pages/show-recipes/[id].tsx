@@ -28,9 +28,9 @@ export default function DetailedRecipe() {
     }, [router.query.id]);
 
     return (
-        <div className="flex flex-col justify-center items-center pt-8">
+        <div className="flex flex-col justify-center items-center pt-8 text-white">
             <h1 className="mb-12 text-2xl">Detailed Recipes</h1>
-            <div className="w-8/12 flex justify-between">
+            <div className="w-8/12 flex justify-between max-h-96">
                 {recipe && (
                     <Image
                         priority
