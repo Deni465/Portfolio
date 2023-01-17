@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recipe App "The Finest" 🍴
 
-## Getting Started
+## Technologies
+NextJS, Typescript, Tailwind, PostgresSQL
 
-First, run the development server:
+## Description
+For this final project, I decided to use a new stack of technologies I hadn't worked with before. With this app, you can search for recipes, add new ones & check the already excisting recipes for a more detailed description. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Future Features
+* register / login
+* saving recipes you like
+* rate & comment recipes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Preview
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Home
+<img width="1438" alt="Bildschirm­foto 2023-01-17 um 13 27 59" src="https://user-images.githubusercontent.com/79863743/212900386-7dc707ac-5032-4019-81da-bb111b1ed8f2.png">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Search Recipe
+<img width="1438" alt="Bildschirm­foto 2023-01-17 um 13 28 25" src="https://user-images.githubusercontent.com/79863743/212900565-6a6fa08b-ce67-4857-97c1-f465784c2ac0.png">
 
-## Learn More
+<img width="1440" alt="Bildschirm­foto 2023-01-17 um 13 29 00" src="https://user-images.githubusercontent.com/79863743/212900618-657bf41d-0ca4-49c0-89b0-553c2991b319.png">
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Detailed Recipe
+<img width="1439" alt="Bildschirm­foto 2023-01-17 um 13 28 37" src="https://user-images.githubusercontent.com/79863743/212900667-d7cec1b0-2743-49d4-ab71-8d331b30b996.png">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Add Recipe
+<img width="1440" alt="Bildschirm­foto 2023-01-17 um 13 29 12" src="https://user-images.githubusercontent.com/79863743/212900753-912bb6ef-58dd-4223-9adb-f23247539060.png">
